@@ -7,6 +7,7 @@
   --Brown-800: hsl(14, 45%, 36%);
   --Rose-800: hsl(332, 51%, 32%);
   --Rose-50: hsl(330, 100%, 98%);
+  --young-serif-font-family: "Young Serif", serif;
 }
 
 * {
@@ -21,6 +22,18 @@ html {
 
 body {
   box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2,
+h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .footer__attribution__info {
