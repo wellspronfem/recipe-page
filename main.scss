@@ -36,18 +36,211 @@ html {
 body {
     box-sizing: border-box;
     font-size: 1.6rem;
+    color: var(--Stone-600);
     @include outfit-font(400);
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--Rose-50);
+}
+
+h1 {
+    position: absolute;
+    opacity: 0;
+    top: -10rem;
 }
 
 h2,
 h3 {
     @include young-serif();
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 2.9rem;
+    color: var(--Brown-800);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 3.2rem;
+
+    &:not(:last-child) {
+        border-bottom: 0.1rem solid var(--Stone-150);
+    }
+
+    ul,
+    ol {
+        padding-bottom: 2rem;
+        vertical-align: middle;
+
+        li {
+            margin: 1rem;
+            margin-left: 2.1rem;
+            padding-left: 1rem;
+            line-height: 1.7;
+        }
+    }
+
+    ol {
+        color: var(--Brown-800);
+        font-weight: 700;
+
+        li {
+            span {
+                font-weight: 400;
+                color: var(--Stone-600);
+            }
+        }
+    }
+
+    ul {
+        color: var(--Brown-800);
+
+        li {
+            span {
+                color: var(--Stone-600);
+            }
+        }
+    }
+}
+
+table {
+    width: 100%;
+    margin: 1.4rem 0;
+    border-spacing: 0;
+
+    tr {
+        td {
+            width: 50%;
+            padding: 1.4rem;
+
+            &:first-of-type {
+                padding-left: 2.5rem;
+            }
+
+            &:last-of-type {
+                color: var(--Brown-800);
+            }
+        }
+
+        &:not(:last-child) {
+            td {
+                border-bottom: 0.1rem solid var(--Stone-150);
+            }
+        }
+    }
+}
+
+.recipe {
+    width: 100%;
+    max-width: 76.8rem;
+    background-color: var(--White);
+
+    &__header {
+        &__image {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__details {
+            margin: 3.5rem 3.1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            &__title {
+                font-size: 3.6rem;
+                line-height: 1;
+                color: var(--Stone-900);
+            }
+
+            &__description {
+                line-height: 1.7;
+            }
+
+            &__preview {
+                background-color: var(--Rose-50);
+                border-radius: 1rem;
+                padding: 2rem;
+                padding-bottom: 1rem;
+
+                &__title {
+                    font-size: 2rem;
+                    color: var(--Rose-800);
+                }
+
+                ul {
+                    color: var(--Rose-800);
+                    vertical-align: middle;
+
+                    li {
+                        margin: 1rem;
+                        margin-left: 2.1rem;
+                        padding-left: 1rem;
+                        line-height: 1.7;
+                        span {
+                            color: var(--Stone-600);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        border-radius: 2rem;
+        margin-top: 5rem;
+
+        &__header {
+            &__image {
+                padding: 4rem;
+
+                img {
+                    border-radius: 1rem;
+                }
+            }
+            
+            &__details {
+                &__title {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+    }
+
+    //&__ingredients {}
+
+    //&__instructions {}
+
+    //&__nutrition {}
 }
 
 .footer {
+    margin: 10rem 0 0;
+    background-color: var(--Rose-50);
+    padding: 2rem 0;
+
     &__attribution {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
         &__info {
-            font-size: 11px;
+            font-size: 12px;
             text-align: center;
 
             a {
